@@ -9,7 +9,6 @@ if (strlen($_SESSION['id']==0)) {
     $message=$_POST['message'];
     $senderid=$_SESSION['id'];
     $receiverid=$_GET['id'];
-    echo $receiverid;
     $sql="";
     $ret="SELECT * FROM tinnhan WHERE receiver_id=:receiverid AND sender_id=:senderid";
     $query=$dbh->prepare($ret);
